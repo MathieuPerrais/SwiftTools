@@ -1,2 +1,3 @@
 # SwiftTools
-Maybe I'll add a bunch of helpers in this for common use.
+
+A Swift Package of useful helpers and extensions I find myself using in projects.
