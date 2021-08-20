@@ -8,15 +8,16 @@ let package = Package(
     platforms: [
         // Add support for all platforms starting from a specific version.
         .macOS(.v10_15),
-        .iOS(.v14),
+        .iOS(.v12),
         .watchOS(.v6),
-        .tvOS(.v13)
+        .tvOS(.v12)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "SwiftTools",
             targets: ["SwiftTools"]),
+        
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -27,7 +28,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SwiftTools",
-            dependencies: []),
+            dependencies: [],
+            exclude:["Logging/README.md"]),
         .testTarget(
             name: "SwiftToolsTests",
             dependencies: ["SwiftTools"]),

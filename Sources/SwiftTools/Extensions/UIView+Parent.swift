@@ -5,6 +5,8 @@
 //  Created by Mathieu Perrais on 5/19/21.
 //
 
+
+#if !os(macOS)
 import UIKit
 
 extension UIView {
@@ -19,3 +21,4 @@ extension UIView {
         return nil
     }
 }
+#endif
